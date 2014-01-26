@@ -1,0 +1,75 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui' ui:generateFormat='com.google.gwt.i18n.rebind.format.PropertiesFormat'
+	ui:generateKeys='com.google.gwt.i18n.rebind.keygen.MD5KeyGenerator'
+	ui:generateLocales='default' xmlns:my="urn:import:com.changestuffs.client.widget">
+
+	<g:HTMLPanel>
+		<div class="primary alert">
+			<p>
+				<i class="icon-info" />
+				<ui:msg description="legalLogin">
+					4xchangin uses
+					<a href="http://openid.net/" target="_blank">OpenID</a>
+					for login management.
+				</ui:msg>
+			</p>
+		</div>
+		<h4>
+			<ui:msg description="loginTitle">Login with one of your next accounts:</ui:msg>
+		</h4>
+		<p>
+			<div class="row">
+				<my:MyLabelImage ui:field="google" stylePrimaryName=" clickable columns tilt"
+					value="https://www.google.com/accounts/o8/id" imageSrc="images/openid/google.png"
+					imageAlt="icon" />
+				<my:MyLabelImage ui:field="yahoo" stylePrimaryName=" clickable columns tilt"
+					value="yahoo.com" imageSrc="images/openid/yahoo.png" imageAlt="icon" />
+				<my:MyLabelImage ui:field="mySpace"
+					stylePrimaryName=" clickable columns tilt" value="myspace.com"
+					imageSrc="images/openid/logo_myspace_s.gif" imageAlt="icon" />
+				<my:MyLabelImage ui:field="aol" stylePrimaryName=" clickable columns tilt"
+					value="aol.com" imageSrc="images/openid/aol.png" imageAlt="icon" />
+				<my:MyLabelImage ui:field="myOpenId"
+					stylePrimaryName=" clickable columns tilt" value="myopenid.com"
+					imageSrc="images/openid/logo_openid.png" imageAlt="icon" />
+			</div>
+			<div class="row">
+				<my:MyLabelImage ui:field="liveJournal"
+					stylePrimaryName=" clickable columns tilt" value="livejournal.com"
+					imageSrc="images/openid/livejournal.png" imageAlt="icon" />
+				<my:MyLabelImage ui:field="hyves" stylePrimaryName=" clickable columns tilt"
+					value="hyves.net" imageSrc="images/openid/hyves.png" imageAlt="icon" />
+				<my:MyLabelImage ui:field="blogger"
+					stylePrimaryName=" clickable columns tilt" value="blogspot.com"
+					imageSrc="images/openid/blogger.png" imageAlt="icon" />
+				<my:MyLabelImage ui:field="wordpress"
+					stylePrimaryName=" clickable columns tilt" value="wordpress.com"
+					imageSrc="images/openid/wordpress-logo-hoz-rgb.png" imageAlt="icon" />
+				<my:MyLabelImage ui:field="orange" stylePrimaryName=" clickable columns tilt"
+					value="orange.com" imageSrc="images/openid/orange.png" imageAlt="icon" />
+			</div>
+		</p>
+		<p>
+			<g:HTMLPanel ui:field="federatedLogin" stylePrimaryName="warning alert">
+				<h5>
+					<ui:msg description="replaceUsername">
+						Replace
+						<strong>username</strong>
+						by yours and go
+					</ui:msg>
+				</h5>
+				<ul>
+					<li class="append field">
+						<g:TextBox ui:field="completeUrl" stylePrimaryName="wide email input" />
+						<g:SubmitButton ui:field="go"
+							stylePrimaryName="medium primary btn clickable">
+							<ui:msg description="go">Go</ui:msg>
+						</g:SubmitButton>
+					</li>
+				</ul>
+			</g:HTMLPanel>
+		</p>
+	</g:HTMLPanel>
+</ui:UiBinder>

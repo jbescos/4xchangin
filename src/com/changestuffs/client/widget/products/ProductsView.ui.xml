@@ -1,0 +1,30 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui' ui:generateFormat='com.google.gwt.i18n.rebind.format.PropertiesFormat'
+	ui:generateKeys='com.google.gwt.i18n.rebind.keygen.MD5KeyGenerator'
+	ui:generateLocales='default' xmlns:my="urn:import:com.changestuffs.client.widget">
+
+	<ui:style>
+		.inCloudLabels {
+			max-height: 100px;
+			height: auto;
+			overflow: auto;
+		}
+	</ui:style>
+	<g:HTMLPanel>
+		<div class="row">
+			<g:HTMLPanel>
+				<span class="adjoined">
+					<i class="icon-search" />
+				</span>
+				<g:TextBox ui:field="searcher" stylePrimaryName="text input" />
+			</g:HTMLPanel>
+			<p>
+				<div class="{style.inCloudLabels}">
+					<g:FlowPanel ui:field="cloud" stylePrimaryName="row columns" />
+				</div>
+			</p>
+		</div>
+	</g:HTMLPanel>
+</ui:UiBinder>

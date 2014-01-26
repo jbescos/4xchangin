@@ -1,0 +1,72 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui' ui:generateFormat='com.google.gwt.i18n.rebind.format.PropertiesFormat'
+	ui:generateKeys='com.google.gwt.i18n.rebind.keygen.MD5KeyGenerator'
+	ui:generateLocales='default' xmlns:my="urn:import:com.changestuffs.client.widget">
+	<g:HTMLPanel>
+		<div class="warning alert">
+			<p>
+				<i class="icon-info" />
+				<ui:msg description="articleDesription">It's mandatory to fill all fields (name,
+					interests and description).</ui:msg>
+				<ui:msg description="responsability">Changestuffs is not responsible of the
+					items you upload</ui:msg>
+			</p>
+		</div>
+		<div class="row">
+			<ul>
+				<li class="field">
+					<my:MyTextBox ui:field="name" stylePrimaryName="field text input"
+						placeholderValue="name" />
+				</li>
+			</ul>
+		</div>
+		<div class="row">
+			<ul>
+				<li class="field">
+					<my:MyTextBox ui:field="interestedIn"
+						stylePrimaryName="field text input" placeholderValue="interestedIn" />
+				</li>
+			</ul>
+		</div>
+		<div class="row">
+			<ul>
+				<li class="field columns">
+					<div class="picker">
+						<my:MyEnumListBox ui:field="tags" />
+					</div>
+				</li>
+				<li class="field columns">
+					<div class="picker">
+						<g:ListBox ui:field="language" stylePrimaryName="picker">
+							<g:item value="en">
+								<ui:msg description="english">Language: English</ui:msg>
+							</g:item>
+							<g:item value="es">
+								<ui:msg description="spanish">Language: Spanish</ui:msg>
+							</g:item>
+						</g:ListBox>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="row">
+			<g:FlowPanel ui:field="textEditor" />
+		</div>
+		<div class="row">
+			<ul>
+				<li class="field">
+					<g:SubmitButton ui:field="save" stylePrimaryName="success alert clickable">
+						<i class="icon-left entypo icon-check" />
+						<ui:msg description="save">Save</ui:msg>
+					</g:SubmitButton>
+					<g:SubmitButton ui:field="cancel" stylePrimaryName="danger alert clickable">
+						<i class="icon-left entypo icon-cancel" />
+						<ui:msg description="cancel">Cancel</ui:msg>
+					</g:SubmitButton>
+				</li>
+			</ul>
+		</div>
+	</g:HTMLPanel>
+</ui:UiBinder>

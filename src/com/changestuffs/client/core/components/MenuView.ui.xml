@@ -1,0 +1,63 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui' ui:generateFormat='com.google.gwt.i18n.rebind.format.PropertiesFormat'
+	ui:generateKeys='com.google.gwt.i18n.rebind.keygen.MD5KeyGenerator'
+	ui:generateLocales='default'>
+
+	<ui:with type="com.changestuffs.client.place.NameTokens" field="nameTokens" />
+	<g:HTMLPanel>
+		<ul>
+			<li>
+				<g:InlineHyperlink targetHistoryToken="{nameTokens.getLookfor};tag=electronic">
+					<i class="icon-monitor" style="color: #555555;" />
+					<ui:msg description="electronic">Electronic</ui:msg>
+				</g:InlineHyperlink>
+			</li>
+			<li>
+				<g:InlineHyperlink targetHistoryToken="{nameTokens.getLookfor};tag=games">
+					<i class="icon-target" style="color: #555555;" />
+					<ui:msg description="games">Games</ui:msg>
+				</g:InlineHyperlink>
+			</li>
+			<li>
+				<g:InlineHyperlink targetHistoryToken="{nameTokens.getLookfor};tag=vehicles">
+					<i class="icon-rocket" style="color: #555555;" />
+					<ui:msg description="vehicles">Vehicles</ui:msg>
+				</g:InlineHyperlink>
+			</li>
+			<li>
+				<g:InlineHyperlink targetHistoryToken="{nameTokens.getLookfor};tag=entertainment">
+					<i class="icon-book" style="color: #555555;" />
+					<ui:msg description="entertainment">Entertainment</ui:msg>
+				</g:InlineHyperlink>
+			</li>
+			<li>
+				<g:InlineHyperlink targetHistoryToken="{nameTokens.getLookfor};tag=sports">
+					<i class="icon-dribbble" style="color: #555555;" />
+					<ui:msg description="sports">Sports</ui:msg>
+				</g:InlineHyperlink>
+			</li>
+			<li>
+
+				<g:InlineHyperlink targetHistoryToken="{nameTokens.getLookfor};tag=furniture">
+					<i class="icon-archive" style="color: #555555;" />
+					<ui:msg description="furniture">Furniture</ui:msg>
+				</g:InlineHyperlink>
+			</li>
+			<li>
+				<g:InlineHyperlink targetHistoryToken="{nameTokens.getLookfor};tag=clothes">
+					<i class="icon-github" style="color: #555555;" />
+					<ui:msg description="clothes">Clothes</ui:msg>
+				</g:InlineHyperlink>
+			</li>
+			<li>
+				<g:InlineHyperlink targetHistoryToken="{nameTokens.getLookfor};tag=others">
+					<i class="icon-dot-3" style="color: #555555;" />
+					<ui:msg description="others">Others</ui:msg>
+				</g:InlineHyperlink>
+			</li>
+		</ul>
+	</g:HTMLPanel>
+
+</ui:UiBinder>

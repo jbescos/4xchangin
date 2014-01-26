@@ -1,0 +1,63 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui' ui:generateFormat='com.google.gwt.i18n.rebind.format.PropertiesFormat'
+	ui:generateKeys='com.google.gwt.i18n.rebind.keygen.MD5KeyGenerator'
+	ui:generateLocales='default' xmlns:my="urn:import:com.changestuffs.client.widget">
+
+	<ui:style>
+		.scroll {
+			max-height: 300px;
+		}
+	</ui:style>
+	<g:HTMLPanel>
+		<h3>
+			<i class="icon-reply" />
+			<ui:msg description="offersSent">Offers sent</ui:msg>
+		</h3>
+		<my:MyTable ui:field="offersSent" colPerRows="4">
+			<g:Label ui:field="wantHead">
+				<ui:msg description="yourProduct">You want</ui:msg>
+			</g:Label>
+			<g:Label ui:field="youOfferHead">
+				<ui:msg description="youOffer">You offer for it</ui:msg>
+			</g:Label>
+			<g:Label ui:field="addHead">
+				<ui:msg description="addArticles">Add articles</ui:msg>
+			</g:Label>
+			<g:Label ui:field="removeHead">
+				<ui:msg description="removeOffer">Remove</ui:msg>
+			</g:Label>
+		</my:MyTable>
+		<h3>
+			<i class="icon-forward" />
+			<ui:msg description="offersReceived">Offers received</ui:msg>
+		</h3>
+		<my:MyTable ui:field="offersReceived" colPerRows="3">
+			<g:Label ui:field="productHead">
+				<ui:msg description="yourProduct">Your product</ui:msg>
+			</g:Label>
+			<g:Label ui:field="offersHead">
+				<ui:msg description="offersForYou">They offer for it</ui:msg>
+			</g:Label>
+			<g:Label ui:field="contactHead">
+				<ui:msg description="contact">Contact?</ui:msg>
+			</g:Label>
+		</my:MyTable>
+		<g:DialogBox ui:field="productsPanel" animationEnabled="true"
+			visible="false" autoHideEnabled="true" stylePrimaryName="popup">
+			<g:HTMLPanel>
+				<h4>
+					<ui:msg description="selectArticles">Select your articles</ui:msg>
+				</h4>
+				<g:ScrollPanel stylePrimaryName="{style.scroll}">
+					<g:VerticalPanel ui:field="checkBoxes" />
+				</g:ScrollPanel>
+				<g:Button ui:field="submitOffer" stylePrimaryName="pretty medium default btn">
+					<i class="icon-left entypo icon-switch" />
+					<ui:msg description="uploadImage">Offer them</ui:msg>
+				</g:Button>
+			</g:HTMLPanel>
+		</g:DialogBox>
+	</g:HTMLPanel>
+</ui:UiBinder>

@@ -1,0 +1,87 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui' ui:generateFormat='com.google.gwt.i18n.rebind.format.PropertiesFormat'
+	ui:generateKeys='com.google.gwt.i18n.rebind.keygen.MD5KeyGenerator'
+	ui:generateLocales='default' xmlns:my="urn:import:com.changestuffs.client.widget">
+
+	<ui:style>
+		.area {
+			width: 100%;
+			color: #000000;
+		}
+		
+		.text {
+			width: 90%;
+		}
+		
+		.button {
+			width: 10%;
+		}
+		
+		.left {
+			float: left;
+		}
+		
+		.contacts {
+			width: 45%;
+		}
+		
+		.contactInfo {
+			width: 50%;
+		}
+	</ui:style>
+	<g:HTMLPanel>
+		<div class="row">
+			<div class="warning alert">
+				<p>
+					<i class="icon-info" />
+					<ui:msg description="addFriends">Add your friends to your contacts.</ui:msg>
+				</p>
+			</div>
+			<ul>
+				<li class="append field">
+					<my:MyTextBox ui:field="friendEmail" stylePrimaryName="wide email input"
+						placeholderValue="mailExample" />
+					<g:SubmitButton ui:field="invite"
+						stylePrimaryName="medium primary btn clickable">
+						<i class="icon-left entypo icon-user-add" />
+						<ui:msg description="invite">Invite</ui:msg>
+					</g:SubmitButton>
+				</li>
+			</ul>
+		</div>
+		<div class="row">
+			<g:HTMLPanel stylePrimaryName="columns {style.contacts}">
+				<div class="row">
+					<h5 style="color: #D04526;">
+						<ui:msg description="pendingContacts">Pending contacts</ui:msg>
+					</h5>
+					<my:MyItemsPanel ui:field="pendingFriends" />
+				</div>
+				<div class="row">
+					<h5 style="color: #D04526;">
+						<ui:msg description="contacts">Your contacts</ui:msg>
+					</h5>
+					<my:MyItemsPanel ui:field="friends" />
+				</div>
+			</g:HTMLPanel>
+			<g:HTMLPanel stylePrimaryName="columns {style.contactInfo}">
+				<div class="row">
+					<h5 style="color: #D04526;">
+						<ui:msg description="information">Information</ui:msg>
+					</h5>
+					<g:Label ui:field="cell" />
+					<g:Label ui:field="city" />
+					<g:Label ui:field="country" />
+				</div>
+				<div class="row">
+					<h5 style="color: #D04526;">
+						<ui:msg description="articles">Articles</ui:msg>
+					</h5>
+					<g:FlowPanel ui:field="articles" />
+				</div>
+			</g:HTMLPanel>
+		</div>
+	</g:HTMLPanel>
+</ui:UiBinder>

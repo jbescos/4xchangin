@@ -1,0 +1,19 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui' ui:generateFormat='com.google.gwt.i18n.rebind.format.PropertiesFormat'
+	ui:generateKeys='com.google.gwt.i18n.rebind.keygen.MD5KeyGenerator'
+	ui:generateLocales='default'>
+	<ui:style>
+		.offerButton {
+			font-size: 200%;
+		}
+	</ui:style>
+	<g:HTMLPanel>
+		<g:SubmitButton ui:field="addOffer"
+			stylePrimaryName="primary alert clickable {style.offerButton}">
+			<ui:msg description="addOffer"><i class="icon-switch" />Do exchange</ui:msg>
+		</g:SubmitButton>
+		<g:FlowPanel ui:field="offers" />
+	</g:HTMLPanel>
+</ui:UiBinder>

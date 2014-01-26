@@ -1,0 +1,21 @@
+<project name="appEngine">
+	<loadproperties srcFile="./build.properties" />
+	<macrodef name="appEngineConfig" description="Manages an application">
+		<attribute name="action" description="One of (update, rollback, update_indexes, request_logs)" />
+		<element name="options" optional="true" description="Options for appcfg (such as --server, --num_days, etc...)"/>
+		<element name="args" optional="true" description="Additional arguments for the java task"/>
+		<sequential>
+			<input message="Enter password :- " addproperty="gae-password" />
+			<java classname="com.google.appengine.tools.admin.AppCfg"
+				inputstring="${gae-password}" classpath="${sdk.dir}/lib/appengine-tools-api.jar"
+				fork="true" failonerror="true">
+				<options/>
+				<arg value="--email=${app.engine.email}" />
+				<arg value="--passin" />
+				<arg value="@{action}" />
+				<arg value="war" />
+				<args/>
+			</java>
+		</sequential>
+	</macrodef>
+</project>

@@ -1,0 +1,57 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui' ui:generateFormat='com.google.gwt.i18n.rebind.format.PropertiesFormat'
+	ui:generateKeys='com.google.gwt.i18n.rebind.keygen.MD5KeyGenerator'
+	ui:generateLocales='default' xmlns:my="urn:import:com.changestuffs.client.widget">
+
+	<g:HTMLPanel stylePrimaryName="sidebar">
+		<div class="row">
+			<ul>
+				<li class="field">
+					<g:TextBox ui:field="name" stylePrimaryName="text input" />
+				</li>
+			</ul>
+		</div>
+		<div class="row">
+			<ul>
+				<li class="field">
+					<g:TextBox ui:field="interestedIn" stylePrimaryName="input textarea" />
+				</li>
+			</ul>
+		</div>
+		<div class="row">
+			<ul>
+				<li class="field">
+					<div class="picker">
+						<g:ListBox ui:field="language" stylePrimaryName="picker">
+							<g:item value="en">
+								<ui:msg description="english">Language: English</ui:msg>
+							</g:item>
+							<g:item value="es">
+								<ui:msg description="spanish">Language: Spanish</ui:msg>
+							</g:item>
+						</g:ListBox>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="row">
+			<g:FlowPanel ui:field="textEditor" />
+		</div>
+		<div class="row">
+			<ul>
+				<li class="field">
+					<g:SubmitButton ui:field="save" stylePrimaryName="success alert clickable">
+						<i class="icon-left entypo icon-check" />
+						<ui:msg description="save">Save</ui:msg>
+					</g:SubmitButton>
+					<g:SubmitButton ui:field="cancel" stylePrimaryName="danger alert clickable">
+						<i class="icon-left entypo icon-cancel" />
+						<ui:msg description="cancel">Cancel</ui:msg>
+					</g:SubmitButton>
+				</li>
+			</ul>
+		</div>
+	</g:HTMLPanel>
+</ui:UiBinder>

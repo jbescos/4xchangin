@@ -1,0 +1,31 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui' ui:generateFormat='com.google.gwt.i18n.rebind.format.PropertiesFormat'
+	ui:generateKeys='com.google.gwt.i18n.rebind.keygen.MD5KeyGenerator'
+	ui:generateLocales='default'>
+	<ui:style>
+		.content {
+			height: auto;
+		}
+		.scroll {
+			height: 200px;
+		}
+	</ui:style>
+	<g:HTMLPanel>
+		<g:Label ui:field="title" />
+		<g:HTMLPanel ui:field="content" stylePrimaryName="{style.content}">
+			<ul>
+				<li>
+					<g:ScrollPanel ui:field="scroll" stylePrimaryName="{style.scroll}">
+						<g:FlowPanel ui:field="textPanel" />
+					</g:ScrollPanel>
+				</li>
+				<li class="append field">
+					<g:TextBox ui:field="text" stylePrimaryName="input" />
+				</li>
+			</ul>
+		</g:HTMLPanel>
+	</g:HTMLPanel>
+
+</ui:UiBinder>

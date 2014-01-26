@@ -1,0 +1,54 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui' ui:generateFormat='com.google.gwt.i18n.rebind.format.PropertiesFormat'
+	ui:generateKeys='com.google.gwt.i18n.rebind.keygen.MD5KeyGenerator'
+	ui:generateLocales='default'>
+
+	<ui:with type="com.changestuffs.client.place.NameTokens" field="nameTokens"></ui:with>
+	<g:HTMLPanel>
+		<ul class="eight columns">
+			<li>
+				<g:InlineHyperlink targetHistoryToken="{nameTokens.getHome}">
+					<i class="icon-home" />
+					<ui:msg description="home">Home</ui:msg>
+				</g:InlineHyperlink>
+			</li>
+			<li>
+				<g:InlineHyperlink targetHistoryToken="{nameTokens.getArticles}"
+					stylePrimaryName="clickable">
+					<i class="icon-left entypo icon-picture" />
+					<ui:msg description="articles">My articles</ui:msg>
+				</g:InlineHyperlink>
+			</li>
+			<li>
+				<g:InlineHyperlink targetHistoryToken="{nameTokens.getInterests}"
+					stylePrimaryName="clickable">
+					<i class="icon-left entypo icon-switch" />
+					<ui:msg description="insterests">Exchanges</ui:msg>
+				</g:InlineHyperlink>
+			</li>
+			<li>
+				<g:InlineHyperlink targetHistoryToken="{nameTokens.getSocial}"
+					stylePrimaryName="clickable">
+					<i class="icon-left entypo icon-users" />
+					<ui:msg description="social">Social</ui:msg>
+				</g:InlineHyperlink>
+			</li>
+			<li>
+				<g:InlineHyperlink targetHistoryToken="{nameTokens.getProfile}"
+					stylePrimaryName="clickable">
+					<i class="icon-left entypo icon-user" />
+					<ui:msg description="profile">Profile</ui:msg>
+				</g:InlineHyperlink>
+			</li>
+			<li>
+				<g:InlineHyperlink ui:field="logout"
+					stylePrimaryName="clickable">
+					<i class="icon-left entypo icon-logout" />
+					<ui:msg description="logout">Logout</ui:msg>
+				</g:InlineHyperlink>
+			</li>
+		</ul>
+	</g:HTMLPanel>
+</ui:UiBinder>

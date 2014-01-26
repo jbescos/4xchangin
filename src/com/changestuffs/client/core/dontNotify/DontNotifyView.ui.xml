@@ -1,0 +1,17 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui' ui:generateFormat='com.google.gwt.i18n.rebind.format.PropertiesFormat'
+	ui:generateKeys='com.google.gwt.i18n.rebind.keygen.MD5KeyGenerator'
+	ui:generateLocales='default' xmlns:a="urn:import:com.google.gwt.aria.client">
+
+	<g:HTMLPanel>
+		<h3>
+			<ui:msg description="title">Email notifications</ui:msg>
+		</h3>
+		<p>
+			<ui:msg description="profile">You have cancelled email notifications, but you can set up again in your profile.</ui:msg>
+		</p>
+
+	</g:HTMLPanel>
+</ui:UiBinder>

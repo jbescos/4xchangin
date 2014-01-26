@@ -1,0 +1,32 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui' ui:generateFormat='com.google.gwt.i18n.rebind.format.PropertiesFormat'
+	ui:generateKeys='com.google.gwt.i18n.rebind.keygen.MD5KeyGenerator'
+	ui:generateLocales='default' xmlns:my="urn:import:com.changestuffs.client.widget">
+
+	<ui:style>
+		.myH1 {
+			font-size: 250%;
+		}
+	</ui:style>
+	<g:HTMLPanel>
+		<g:FlowPanel ui:field="productsPanel" />
+		<g:HTMLPanel ui:field="articlePanel">
+			<h1 class="{style.myH1}">
+				<g:Label ui:field="articleName" />
+			</h1>
+			<div class="warning alert">
+				<h5>
+					<i class="icon-info" />
+	
+					<ui:msg description="interestedIn">I'm interested in: </ui:msg>
+					<span class="alert" ui:field="interestedIn" />
+				</h5>
+			</div>
+			<g:FlowPanel ui:field="offersPanel" />
+			<g:FlowPanel ui:field="socialPanel" />
+			<g:FlowPanel ui:field="articleDescription" />
+		</g:HTMLPanel>
+	</g:HTMLPanel>
+</ui:UiBinder>

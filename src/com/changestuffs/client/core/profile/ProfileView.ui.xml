@@ -1,0 +1,49 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui' ui:generateFormat='com.google.gwt.i18n.rebind.format.PropertiesFormat'
+	ui:generateKeys='com.google.gwt.i18n.rebind.keygen.MD5KeyGenerator'
+	ui:generateLocales='default'>
+
+	<g:HTMLPanel>
+		<p class="warning alert">
+			<i class="icon-info" />
+			<ui:msg description="conditions">The next inputs can only by watched by
+				people
+				who you have offered any article to them.</ui:msg>
+		</p>
+		<ul class="one columns">
+			<li class="field">
+				<ui:msg description="email">Email: </ui:msg>
+				<g:Label ui:field="email" />
+			</li>
+			<li class="field">
+				<ui:msg description="cell">Cell: </ui:msg>
+				<g:TextBox ui:field="cell" stylePrimaryName="field text input" />
+			</li>
+			<li class="field">
+				<ui:msg description="country">Country: </ui:msg>
+				<g:TextBox ui:field="country" stylePrimaryName="field text input" />
+			</li>
+			<li class="field">
+				<ui:msg description="city">City: </ui:msg>
+				<g:TextBox ui:field="city" stylePrimaryName="field text input" />
+			</li>
+			<li>
+				<g:CheckBox ui:field="receiveEmails">
+					<ui:msg description="receiveEmails">Receive emails notification</ui:msg>
+				</g:CheckBox>
+			</li>
+			<li>
+				<g:SubmitButton ui:field="submit"
+					stylePrimaryName="pretty medium default btn clickable">
+					<i class="icon-left entypo icon-floppy" />
+					<ui:msg description="save">Save</ui:msg>
+				</g:SubmitButton>
+				<g:Label ui:field="updated">
+					<ui:msg description="updated">Updated</ui:msg>
+				</g:Label>
+			</li>
+		</ul>
+	</g:HTMLPanel>
+</ui:UiBinder>

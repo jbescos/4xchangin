@@ -1,0 +1,33 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui' ui:generateFormat='com.google.gwt.i18n.rebind.format.PropertiesFormat'
+	ui:generateKeys='com.google.gwt.i18n.rebind.keygen.MD5KeyGenerator'
+	ui:generateLocales='default' xmlns:my="urn:import:com.changestuffs.client.widget">
+	<g:HTMLPanel>
+		<h4>
+			<ui:msg description="yourArticles">Your articles:</ui:msg>
+		</h4>
+		<my:MyTable ui:field="articles" colPerRows="5">
+			<g:Label ui:field="nameHead">
+				<ui:msg description="articleName">Name</ui:msg>
+			</g:Label>
+			<g:Label ui:field="dateHead">
+				<ui:msg description="articleDate">Creation date</ui:msg>
+			</g:Label>
+			<g:Label ui:field="tagHead">
+				<ui:msg description="articleTag">Tag</ui:msg>
+			</g:Label>
+			<g:Label ui:field="editHead">
+				<ui:msg description="articleEdit">Edit</ui:msg>
+			</g:Label>
+			<g:Label ui:field="removeHead">
+				<ui:msg description="articleRemove">Remove</ui:msg>
+			</g:Label>
+		</my:MyTable>
+		<g:SubmitButton ui:field="create" stylePrimaryName="primary alert clickable">
+			<i class="icon-left entypo icon-upload-cloud" />
+			<ui:msg description="createArticle">Create article</ui:msg>
+		</g:SubmitButton>
+	</g:HTMLPanel>
+</ui:UiBinder>
